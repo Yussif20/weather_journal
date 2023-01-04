@@ -1,7 +1,7 @@
 /* Global Variables */
 const baseURL = "http://api.openweathermap.org/data/2.5/forecast?zip=";
-const apiKey = "&appid=4d4ae08339ca471314324f6c8c18374c";
-// const apiKey = "7a790157fdc0f0770cb4dfd11af5f843";
+const apiKey = "&appid=7a790157fdc0f0770cb4dfd11af5f843";
+// const apiKey = "b4a42ee5c694e319a8c906e229f7e8f2";
 
 const zipCodeEl = document.querySelector("#zip");
 const dateEl = document.querySelector("#date");
