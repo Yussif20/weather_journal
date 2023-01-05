@@ -1,5 +1,5 @@
 /* Global Variables */
-const baseURL = "http://api.openweathermap.org/data/2.5/forecast?zip=";
+const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
 const apiKey = "&appid=7a790157fdc0f0770cb4dfd11af5f843";
 // const apiKey = "b4a42ee5c694e319a8c906e229f7e8f2";
 
@@ -21,10 +21,10 @@ function generate(e) {
   const zipCode = zipCodeEl.value;
   const feelings = feelingsEl.value;
   getInfo(baseURL, zipCode, apiKey).then((data) => {
-    console.log(data);
+    console.log(data.main.temp);
     postData("/add", {
       date: d,
-      temp: data.list[0].main.temp,
+      temp: data.main.temp,
       content: feelings,
     });
     updateUI();
